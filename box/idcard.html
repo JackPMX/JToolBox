@@ -81,28 +81,29 @@
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                      <li class="nav-item">
-                        <a href="../index.html" class="nav-link">
-                          <i class="nav-icon fas fa-th"></i>
-                          <p>
-                            主页
-                            <!-- <span class="right badge badge-danger">New</span> -->
-                          </p>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="idcard.html" class="nav-link">
-                          <i class="nav-icon fas fa-th"></i>
-                          <p>
-                            身份证信息获取
-                            <!-- <span class="right badge badge-danger">New</span> -->
-                          </p>
-                        </a>
-                      </li>
-                      <!-- Add icons to the links using the .nav-icon class
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    主页
+                                    <!-- <span class="right badge badge-danger">New</span> -->
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="idcard.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    身份证信息获取
+                                    <!-- <span class="right badge badge-danger">New</span> -->
+                                </p>
+                            </a>
+                        </li>
+                        <!-- Add icons to the links using the .nav-icon class
                            with font-awesome or any other icon font library -->
-                      <!-- <li class="nav-item menu-open">
+                        <!-- <li class="nav-item menu-open">
                         <a href="#" class="nav-link active">
                           <i class="nav-icon fas fa-tachometer-alt"></i>
                           <p>
@@ -125,7 +126,7 @@
                           </li>
                         </ul>
                       </li> -->
-                      <!-- <li class="nav-item">
+                        <!-- <li class="nav-item">
                         <a href="#" class="nav-link">
                           <i class="nav-icon fas fa-th"></i>
                           <p>
@@ -135,7 +136,7 @@
                         </a>
                       </li> -->
                     </ul>
-                  </nav>
+                </nav>
                 <!-- /.sidebar-menu -->
             </div>
             <!-- /.sidebar -->
@@ -321,6 +322,9 @@
 
                 if (reg.test(idNum) === false) {
                     alert("请输入正确身份证号");
+                    $('#birth').text('')
+                    $('#sex').text('')
+                    $('#age').text('')
                     return false;
                 }
 
@@ -330,6 +334,9 @@
                 let age = 0
                 if (parseInt(birthMonth) > 12 || parseInt(birthDay) > 31) {
                     alert('请输入正确身份证号')
+                    $('#birth').text('')
+                    $('#sex').text('')
+                    $('#age').text('')
                     return
                 }
 
