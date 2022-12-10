@@ -1,6 +1,7 @@
 # System / Log files
 *.DS_Store
 *.log
+*.md
 
 # Archives
 *.zip
